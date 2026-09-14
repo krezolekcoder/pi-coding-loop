@@ -1,0 +1,6 @@
+version: 1
+reviewer:
+  model: null
+  initialContext: fresh
+  contextMode: retained
+  maxRounds: 3

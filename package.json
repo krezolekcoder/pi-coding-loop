@@ -1,0 +1,57 @@
+{
+  "name": "pi-coding-loop",
+  "version": "0.1.0",
+  "description": "A minimal implementer/reviewer loop for existing Markdown implementation ledgers in Pi.",
+  "license": "MIT",
+  "homepage": "https://github.com/krezolekcoder/pi-coding-loop#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krezolekcoder/pi-coding-loop.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krezolekcoder/pi-coding-loop/issues"
+  },
+  "type": "module",
+  "files": [
+    "extensions",
+    "skills",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "pi-package",
+    "pi-coding-agent",
+    "implementation-ledger",
+    "code-review"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/pi-coding-loop/index.ts"
+    ],
+    "skills": [
+      "./skills/ledger-format"
+    ]
+  },
+  "scripts": {
+    "test": "tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm test && npm run typecheck && npm pack --dry-run"
+  },
+  "dependencies": {
+    "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "0.80.2",
+    "@earendil-works/pi-coding-agent": "0.80.2",
+    "@types/node": "^22.15.0",
+    "tsx": "^4.20.0",
+    "typebox": "1.1.38",
+    "typescript": "^5.8.0"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
+  }
+}
